@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import TopBar from './components/TopBar/index.js';
 import Router from './components/Router/index.js';
 
 class App extends Component {
@@ -45,13 +44,12 @@ class App extends Component {
     // console.log(this.state);
   }
   render() {
-    let someClass = "Bar-box";
-    if(this.state.scrollFlag){
-      someClass = "Bar-box-hidden";
-    };
+    // let someClass = "Bar-box";
+    // if(this.state.scrollFlag){
+    //   someClass = "Bar-box-hidden";
+    // };
     return (
       <div className="App">
-        <TopBar className={someClass}/>
         <Router/>
       </div>
     );

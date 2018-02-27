@@ -7,7 +7,7 @@ class TopBar extends Component {
     return (
       <div className={this.props.className}>
         <nav className="nav navbar">
-          <div className="logo"><Link to="/"><p>Grailsoft Technical Solutions</p></Link></div>
+          <div className="logo"><Link to="/"><p>Aimee&apos;s Garden</p></Link></div>
           <ul className="menu">
             <li className="menu-item"><p><Link to="/Work">Work</Link></p></li>
             <li className="menu-item"><p><Link to="/About">About</Link></p></li>
