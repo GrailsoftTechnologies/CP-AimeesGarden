@@ -1,20 +1,36 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import './styles.css';
+import Logo from '../../img/aimeesLogo.png';
 
 class TopBar extends Component {
   render() {
     return (
-      <div className={this.props.className}>
-        <nav className="nav navbar">
-          <div className="logo"><Link to="/"><p>Aimee&apos;s Garden</p></Link></div>
-          <ul className="menu">
-            <li className="menu-item"><p><Link to="/Work">Work</Link></p></li>
-            <li className="menu-item"><p><Link to="/About">About</Link></p></li>
-            <li className="menu-item"><p><Link to="/contact">Contact</Link></p></li>
-          </ul>
-        </nav>
-      </div>
+      <Navbar inverse fluid className={this.props.className}>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <Link to="/"><img src={Logo} alt='the grailsoft logo'></img></Link>
+          </Navbar.Brand>
+          <Navbar.Toggle/>
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav pullRight>
+            <NavItem href="/About">
+              About
+            </NavItem>
+            <NavItem href="/Projects">
+              Projects
+            </NavItem>
+            <NavItem href="/Products">
+              Products & Services
+            </NavItem>
+            <NavItem href="/Contact">
+              Contact
+            </NavItem>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     );
   }
 }
@@ -22,5 +38,9 @@ class TopBar extends Component {
 TopBar.defaultProps = {
   className: "Bar-box",
 }
+
+// TopBar.propTypes = {
+//   className: React.PropTypes.string
+// }
 
 export default TopBar;

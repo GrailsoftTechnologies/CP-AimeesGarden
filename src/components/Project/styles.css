@@ -1,0 +1,22 @@
+.Project {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin: 50px;
+  color: white;
+}
+
+.TextBlock{
+  background-color: grey;
+  opacity: .75;
+  width: 100%;
+}
+
+@media (max-width: 768px){
+  .Project{
+    margin: 0px;
+    padding: 0px;
+  }
+}

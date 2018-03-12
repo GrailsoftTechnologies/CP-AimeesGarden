@@ -1,20 +1,39 @@
 .Bar-box {
   /* text-align: center; */
-  height: '.5em';
-  padding-top: .5em;
+  height: '1.5em';
+  padding-top: 1em;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  float: left;
-  background-color: black;
+  background-color: #28525A;
   z-index: 1;
+  border: 0px;
 }
-a{
-  color: white;
+.Navbar-Header {
+  background-color: #28525A;
+  color: #FFFFFF;
+}
+.Link {
+  background-color: #28525A;
+  margin-bottom: 4px;
+  border: 0px;
+}
+img {
+  background-color: #28525A;
+  margin-bottom: 4px;
+  justify-content: center;
+  border: 0px;
+}
+.Navbar-Brand {
+  padding: 0px;
+}
+.Navbar-Inverse .Navbar-Collapse {
+  background-color: #28525A;
+  border: 0px;
 }
 
-.Bar-box-hidden {
+.Bar-box-brown {
   text-align: center;
   height: '1.5em';
   padding-top: .5em;
@@ -23,9 +42,10 @@ a{
   left: 0;
   width: 100%;
   opacity: .95;
-  background-color: grey;
+  background-color: #28525A;
   z-index: 1;
   visibility: hidden;
+  border: 0px;
 }
 .logo{
   display: inline-block;
@@ -45,4 +65,8 @@ a{
   padding-right: 1.5em;
   padding-bottom: 0;
   float: left;
+}
+.container-fluid {
+  color: #ffffff;
+  width: 100%;
 }

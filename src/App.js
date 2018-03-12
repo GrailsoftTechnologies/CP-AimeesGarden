@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import TopBar from './components/TopBar/index.js';
 import Router from './components/Router/index.js';
+import Footer from './components/Footer';
 
 class App extends Component {
   constructor(props){
@@ -20,37 +22,33 @@ class App extends Component {
   handleScroll(){
     if(window.scrollY > 84){
       if(window.scrollY > this.state.oldScrollY){
-        console.log("scrolling down");
         this.setState({oldScrollY: window.scrollY});
         if(!this.state.scrollFlag){
           this.setState({scrollFlag: true});
         }
       } else if(window.scrollY < this.state.oldScrollY){
-        console.log("scrolling up");
         this.setState({oldScrollY: window.scrollY});
         if(this.state.scrollFlag){
           this.setState({scrollFlag: false});
         }
       } else{
-        console.log("no scrollY");
       }
     } else if(window.scrollY <= 84){
       if(this.state.scrollFlag){
-        console.log("scroll down done");
         this.setState({scrollFlag: false});
       }
     }
-    console.log(window.scrollY);
-    // console.log(this.state);
   }
   render() {
-    // let someClass = "Bar-box";
-    // if(this.state.scrollFlag){
-    //   someClass = "Bar-box-hidden";
-    // };
+    let someClass = "Bar-box";
+    if(this.state.scrollFlag){
+      someClass = "Bar-box-brown";
+    };
     return (
       <div className="App">
+        <TopBar className={someClass}/>
         <Router/>
+        <Footer/>
       </div>
     );
   }

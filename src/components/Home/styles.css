@@ -26,18 +26,22 @@
     line-height: 2.1em;
 }
 .services {
-    background-color: #FBEEC1;
-    color: rgba(127, 153, 102, 0.75);
+    background-color: #4686a0;
+    color: rgba(255, 255, 255, 0.75);
     background-attachment: fixed,	fixed, fixed;
-    /* background-image: url(../../images/overlay2.png), url(../../images/overlay3.svg), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2); */
+    background-image: url(../../img/overlay2.png), url(../../img/overlay3.svg), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
     background-position: top left,	center center,	center center;
     background-size: auto,	cover,	cover;
     overflow: hidden;
     text-align: center;
+    width: 100%;
     padding: 2em;
 }
 .container {
   margin: 0;
   max-width: 100%;
-  height: 100vh;
+}
+.jumbotron{
+  margin-top: 92px;
+  color: #28525A;
 }
