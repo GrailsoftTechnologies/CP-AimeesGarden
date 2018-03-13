@@ -1,9 +1,9 @@
 .Profile {
   padding-top: 100px;
-  background-color: #4686a0;
+  background-color: #475300;
   color: rgba(255, 255, 255, 0.75);
   background-attachment: fixed,	fixed, fixed;
-  background-image: url(../../img/overlay2.png), url(../../img/overlay3.svg), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
+  background-image: url(../../img/overlay2.png), url(../../img/overlay3.svg), linear-gradient(45deg, #475300 5%, #C0CF67 30%, #ECF8A5);
   background-position: top left,	center center,	center center;
   background-size: auto,	cover,	cover;
   height: 100%;

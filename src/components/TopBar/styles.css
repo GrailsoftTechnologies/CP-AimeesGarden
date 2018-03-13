@@ -6,21 +6,21 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #28525A;
+  background-color: #475300;
   z-index: 1;
   border: 0px;
 }
 .Navbar-Header {
-  background-color: #28525A;
+  background-color: #475300;
   color: #FFFFFF;
 }
 .Link {
-  background-color: #28525A;
+  background-color: #475300;
   margin-bottom: 4px;
   border: 0px;
 }
 img {
-  background-color: #28525A;
+  background-color: #475300;
   margin-bottom: 4px;
   justify-content: center;
   border: 0px;
@@ -29,7 +29,7 @@ img {
   padding: 0px;
 }
 .Navbar-Inverse .Navbar-Collapse {
-  background-color: #28525A;
+  background-color: #475300;
   border: 0px;
 }
 
@@ -42,7 +42,7 @@ img {
   left: 0;
   width: 100%;
   opacity: .95;
-  background-color: #28525A;
+  background-color: #475300;
   z-index: 1;
   visibility: hidden;
   border: 0px;
