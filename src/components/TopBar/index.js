@@ -22,7 +22,7 @@ class TopBar extends Component {
             <NavItem href="/Projects">
               Projects
             </NavItem>
-            <NavItem href="/Products">
+            <NavItem href="/Products_and_services">
               Products & Services
             </NavItem>
             <NavItem href="/Contact">
