@@ -19,6 +19,9 @@ class TopBar extends Component {
             <NavItem href="/About">
               About
             </NavItem>
+            <NavItem href="/Seeds">
+              Seeds
+            </NavItem>
             <NavItem href="/Projects">
               Projects
             </NavItem>
