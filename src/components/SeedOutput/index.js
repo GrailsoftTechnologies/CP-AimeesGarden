@@ -124,47 +124,47 @@ removeSeed(seedId) {
             <div className='user-profile'>
               <img src={this.state.user.photoURL} />
             </div>
+            <div className='container'>
+              <section className='add-item'>
+                <form onSubmit={this.handleSubmit}>
+                  <input type="text" name="name" placeholder="Common Name" onChange={this.handleChange} value={this.state.name}/>
+                  <input type="text" name="id" placeholder="Store Id" onChange={this.handleChange} value={this.state.id}/>
+                  <input type="text" name="cultivar" placeholder="Cultivar" onChange={this.handleChange} value={this.state.cultivar}/>
+                  <input type="text" name="species" placeholder="Species" onChange={this.handleChange} value={this.state.species}/>
+                  <input type="text" name="source" placeholder="Source" onChange={this.handleChange} value={this.state.source}/>
+                  <input type="text" name="packDate" placeholder="Pack Date" onChange={this.handleChange} value={this.state.packDate}/>
+                  <input type="text" name="pic" placeholder="Picture" onChange={this.handleChange} value={this.state.pic}/>
+                  <input type="text" name="link" placeholder="Link" onChange={this.handleChange} value={this.state.link}/>
+                  <button>Add Item</button>
+                </form>
+              </section>
+              <section className='display-item'>
+                <div className='wrapper'>
+                  <ul>
+                    {this.state.seeds.map((seed) => {
+                      return (
+                        <li key={seed.id}>
+                          <h3>{seed.name}</h3>
+                          <p>Cultivar: {seed.cultivar}</p>
+                          <p>Species: {seed.species}</p>
+                          <p>Source: {seed.source}</p>
+                          <p>Pack Date: {seed.packDate}</p>
+                          <p>Picture: {seed.pic}</p>
+                          <button id="testButton" onClick={() => this.editSeed(seed.id)}>Edit Seed</button>
+                          <button id="testButton2" onClick={() => this.removeSeed(seed.id)}>Remove Seed</button>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              </section>
+            </div>
           </div>
           :
           <div className='wrapper'>
             <p>You must be logged in to see the potluck list and submit to it.</p>
           </div>
         }
-        <div className='container'>
-          <section className='add-item'>
-              <form onSubmit={this.handleSubmit}>
-                <input type="text" name="name" placeholder="Common Name" onChange={this.handleChange} value={this.state.name}/>
-                <input type="text" name="id" placeholder="Store Id" onChange={this.handleChange} value={this.state.id}/>
-                <input type="text" name="cultivar" placeholder="Cultivar" onChange={this.handleChange} value={this.state.cultivar}/>
-                <input type="text" name="species" placeholder="Species" onChange={this.handleChange} value={this.state.species}/>
-                <input type="text" name="source" placeholder="Source" onChange={this.handleChange} value={this.state.source}/>
-                <input type="text" name="packDate" placeholder="Pack Date" onChange={this.handleChange} value={this.state.packDate}/>
-                <input type="text" name="pic" placeholder="Picture" onChange={this.handleChange} value={this.state.pic}/>
-                <input type="text" name="link" placeholder="Link" onChange={this.handleChange} value={this.state.link}/>
-                <button>Add Item</button>
-              </form>
-          </section>
-          <section className='display-item'>
-            <div className='wrapper'>
-              <ul>
-                {this.state.seeds.map((seed) => {
-                  return (
-                    <li key={seed.id}>
-                      <h3>{seed.name}</h3>
-                      <p>Cultivar: {seed.cultivar}</p>
-                      <p>Species: {seed.species}</p>
-                      <p>Source: {seed.source}</p>
-                      <p>Pack Date: {seed.packDate}</p>
-                      <p>Picture: {seed.pic}</p>
-                      <button id="testButton" onClick={() => this.editSeed(seed.id)}>Edit Seed</button>
-                      <button id="testButton2" onClick={() => this.removeSeed(seed.id)}>Remove Seed</button>
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
-          </section>
-        </div>
       </div>
     );
   }
