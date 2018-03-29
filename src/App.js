@@ -40,9 +40,9 @@ class App extends Component {
     }
   }
   render() {
-    let someClass = "Bar-box";
+    let someClass = "Top-bar";
     if(this.state.scrollFlag){
-      someClass = "Bar-box-brown";
+      someClass = "Top-bar-hidden";
     };
     return (
       <div className="App">

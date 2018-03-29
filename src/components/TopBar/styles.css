@@ -1,4 +1,4 @@
-.Bar-box {
+.Top-bar {
   /* text-align: center; */
   height: '1.5em';
   padding-top: 1em;
@@ -22,9 +22,16 @@
 img {
   background-color: #475300;
   margin-bottom: 4px;
-  justify-content: center;
+  max-height: 30px;
+  /* justify-content: center; */
   border: 0px;
 }
+
+#testBrand {
+  font-size: 25px;
+  color: #C0CF67;
+}
+
 .Navbar-Brand {
   padding: 0px;
 }
@@ -33,7 +40,7 @@ img {
   border: 0px;
 }
 
-.Bar-box-brown {
+.Top-bar-hidden {
   text-align: center;
   height: '1.5em';
   padding-top: .5em;

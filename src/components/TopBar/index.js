@@ -10,7 +10,7 @@ class TopBar extends Component {
       <Navbar inverse fluid className={this.props.className}>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to="/"><img src={Logo} alt='the grailsoft logo'></img></Link>
+            <Link to="/" id="testBrand">Aimee's Garden</Link>
           </Navbar.Brand>
           <Navbar.Toggle/>
         </Navbar.Header>
@@ -39,7 +39,7 @@ class TopBar extends Component {
 }
 
 TopBar.defaultProps = {
-  className: "Bar-box",
+  className: "Top-bar",
 }
 
 // TopBar.propTypes = {
