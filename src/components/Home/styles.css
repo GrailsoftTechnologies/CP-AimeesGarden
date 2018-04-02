@@ -1,5 +1,4 @@
 .Home {
-  background-color: red;
 }
 .icon {
   height: 5em;
@@ -26,19 +25,19 @@
   line-height: 2.1em;
 }
 .services {
-  /* background-color: #475300; */
-
   color: rgba(255, 255, 255, 0.75);
-  /* background-attachment: fixed,	fixed, fixed;
-  background-image: url(../../img/overlay2.png), url(../../img/overlay3.svg), linear-gradient(45deg, #475300 5%, #C0CF67 30%, #ECF8A5); */
-  /* background-position: 0 0, 50%, 50%; */
-  /* background-size: auto,	cover,	cover; */
-  /* overflow: hidden;
-  text-align: center; */
-  /* width: 100%; */
-  /* padding: 2em; */
+  background-attachment: fixed,	fixed, fixed;
+  background-position: 0 0, 50%, 50%;
+  background-size: auto,	cover,	cover;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  padding: 2em;
 }
 .container {
   margin: 0;
   max-width: 100%;
+}
+
+section {
 }

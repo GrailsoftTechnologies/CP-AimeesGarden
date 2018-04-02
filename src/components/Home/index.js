@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { Grid, Row, Col } from 'react-bootstrap';
 import './styles.css';
 
-import { Grid, Row, Col } from 'react-bootstrap';
 
 
 class Home extends Component {
@@ -11,7 +11,7 @@ class Home extends Component {
   render() {
     return (
       <section className="main">
-        <Grid className="dark services">
+        <div className="dark services">
           <Row className="row">
             <Col xs={12} md={4}>
               <section>
@@ -41,7 +41,7 @@ class Home extends Component {
               </section>
             </Col>
           </Row>
-        </Grid>
+        </div>
       </section>
     );
   }
