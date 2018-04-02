@@ -8,5 +8,5 @@
   background-image: url(../../img/overlay2.png), url(../../img/overlay3.svg), linear-gradient(45deg, #475300 5%, #C0CF67 30%, #ECF8A5);
   background-position: top left,	center center,	center center;
   background-size: auto,	cover,	cover;
-  min-height: 500px;
+  min-height: 800px;
 }

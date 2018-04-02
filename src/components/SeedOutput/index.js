@@ -15,12 +15,14 @@ class SeedOutput extends Component {
       pic: '',
       link: '',
       seeds: [],
-      user: null
+      user: null,
+      isEditing: false
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
+    this.toggleEdit = this.toggleEdit.bind(this);
   }
 
   handleChange(e) {
@@ -73,44 +75,51 @@ class SeedOutput extends Component {
   });
 }
 
-componentDidMount() {
-  auth.onAuthStateChanged((user) => {
-    if (user) {
-      this.setState({ user });
-    }
-  });
-  const seedsRef = firebase.database().ref('seeds');
-  seedsRef.on('value', (snapshot) => {
-    let seeds = snapshot.val();
-    let newState = [];
-    for (let seed in seeds) {
-      newState.push({
-        id: seed,
-        name: seeds[seed].name,
-        cultivar: seeds[seed].cultivar,
-        species: seeds[seed].species,
-        source: seeds[seed].source,
-        packDate: seeds[seed].packDate,
-        pic: seeds[seed].pic,
-        // link: seeds[seed].link,
-      });
-    }
-    this.setState({
-      seeds: newState
+  componentDidMount() {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user });
+      }
     });
-  });
-}
+    const seedsRef = firebase.database().ref('seeds');
+    seedsRef.on('value', (snapshot) => {
+      let seeds = snapshot.val();
+      let newState = [];
+      for (let seed in seeds) {
+        newState.push({
+          id: seed,
+          name: seeds[seed].name,
+          cultivar: seeds[seed].cultivar,
+          species: seeds[seed].species,
+          source: seeds[seed].source,
+          packDate: seeds[seed].packDate,
+          pic: seeds[seed].pic,
+          // link: seeds[seed].link,
+        });
+      }
+      this.setState({
+        seeds: newState
+      });
+    });
+  }
 
-editSeed(seedId) {
-  
-}
+  toggleEdit() {
+    this.setState({isEditing: !this.state.isEditing})
+  }
 
-removeSeed(seedId) {
-  const seedRef = firebase.database().ref(`/seeds/${seedId}`);
-  seedRef.remove();
-}
+  removeSeed(seedId) {
+    const seedRef = firebase.database().ref(`/seeds/${seedId}`);
+    seedRef.remove();
+  }
 
   render() {
+    if (this.state.isEditing) {
+      return (
+      <div>
+        <h1>Edit Seed</h1>
+      </div>
+      )
+    }
     return (
       <div className='app'>
         <header>
@@ -154,7 +163,7 @@ removeSeed(seedId) {
                           <p>Source: {seed.source}</p>
                           <p>Pack Date: {seed.packDate}</p>
                           <p>Picture: {seed.pic}</p>
-                          <button id="testButton" onClick={() => this.editSeed(seed.id)}>Edit Seed</button>
+                          <button id="testButton" onClick={() => this.toggleEdit(seed.id)}>Edit Seed</button>
                           <button id="testButton2" onClick={() => this.removeSeed(seed.id)}>Remove Seed</button>
                         </li>
                       )
