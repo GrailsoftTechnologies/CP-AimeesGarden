@@ -101,6 +101,10 @@ componentDidMount() {
   });
 }
 
+editSeed(seedId) {
+  
+}
+
 removeSeed(seedId) {
   const seedRef = firebase.database().ref(`/seeds/${seedId}`);
   seedRef.remove();
