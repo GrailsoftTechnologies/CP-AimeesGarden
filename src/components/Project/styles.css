@@ -1,10 +1,10 @@
 .Project {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 160px;
+  /* padding-bottom: 200px; */
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: center;
-  margin: 50px;
+  background-position: top center;
+  /* margin: 50px; */
   color: white;
 }
 
@@ -12,6 +12,11 @@
   background-color: grey;
   opacity: .75;
   width: 100%;
+}
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  color: #fff;
 }
 
 @media (max-width: 768px){

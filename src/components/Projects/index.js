@@ -15,13 +15,43 @@ class Work extends Component {
       <div className="Projects">
         <Grid className="About">
           <Row>
-            <Col md={12}>
+            <Col md={3}>
               <Project
-                title="Aimees Garden"
-                details="Urban Farm located in Portland Oregon providing quality produce"
+                title="Happy Valley Project"
+                details="Two Adult Family Edible Garden"
                 styles={{
                   backgroundImage: 'url(' + RaisedBedPic + ')',
-                  backgroundSize: '40%',
+                  backgroundSize: '100%',
+                }}
+                link="https://github.com/GrailsoftTechnologies/CP-AimeesGarden" />
+            </Col>
+            <Col md={3}>
+              <Project
+                title="Happy Valley Project 2"
+                details="Two Adult Two Children Family Edible Garden"
+                styles={{
+                  backgroundImage: 'url(' + RaisedBedPic + ')',
+                  backgroundSize: '100%',
+                }}
+                link="https://github.com/GrailsoftTechnologies/CP-AimeesGarden" />
+            </Col>
+            <Col md={3}>
+              <Project
+                title="Happy Valley Project 2"
+                details="Two Adult Two Children Family Edible Garden"
+                styles={{
+                  backgroundImage: 'url(' + RaisedBedPic + ')',
+                  backgroundSize: '100%',
+                }}
+                link="https://github.com/GrailsoftTechnologies/CP-AimeesGarden" />
+            </Col>
+            <Col md={3}>
+              <Project
+                title="Happy Valley Project 2"
+                details="Two Adult Two Children Family Edible Garden"
+                styles={{
+                  backgroundImage: 'url(' + RaisedBedPic + ')',
+                  backgroundSize: '100%',
                 }}
                 link="https://github.com/GrailsoftTechnologies/CP-AimeesGarden" />
             </Col>
