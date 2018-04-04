@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
-
 import Project from '../Project';
-
 import RaisedBedPic from '../../img/raisedBed.jpg';
 import './styles.css';
 
@@ -37,8 +35,8 @@ class Work extends Component {
             </Col>
             <Col md={3}>
               <Project
-                title="Happy Valley Project 2"
-                details="Two Adult Two Children Family Edible Garden"
+                title="Happy Valley Project 3"
+                details="Test Edible Garden"
                 styles={{
                   backgroundImage: 'url(' + RaisedBedPic + ')',
                   backgroundSize: '100%',
@@ -47,8 +45,8 @@ class Work extends Component {
             </Col>
             <Col md={3}>
               <Project
-                title="Happy Valley Project 2"
-                details="Two Adult Two Children Family Edible Garden"
+                title="Happy Valley Project 4"
+                details="Test Family Edible Garden"
                 styles={{
                   backgroundImage: 'url(' + RaisedBedPic + ')',
                   backgroundSize: '100%',
